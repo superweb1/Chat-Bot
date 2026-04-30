@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: chat-bot
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bot?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: sudeep
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+openai:
+  api:
+    key: sk-proj-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
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
